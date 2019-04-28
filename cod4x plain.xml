@@ -1,0 +1,35 @@
+<Container version="2">
+	<Name>cod4x</Name>
+	<Repository>qmcgaw/cod4</Repository>
+	<Registry>https://hub.docker.com/r/qmcgaw/cod4/</Registry>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://hub.docker.com/r/qmcgaw/cod4/</Support>
+	<Project/>
+	<Overview>
+Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container
+	</Overview>
+	<Category>
+Other
+	</Category>
+	<WebUI/>
+	<TemplateURL/>
+	<Icon>
+/plugins/dynamix.docker.manager/images/question.png
+	</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DonateText/>
+	<DonateLink/>
+	<Description>
+Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container
+	</Description>
+	<Environment/>
+	<Labels/>
+	<Config Name="COD4 main" Target="/home/user/cod4/main" Default="" Mode="rw" Description="Container Path: /home/user/cod4/main" Type="Path" Display="always" Required="true" Mask="false"/>
+	<Config Name="COD4 zone" Target="/home/user/cod4/zone" Default="" Mode="ro" Description="Container Path: /home/user/cod4/zone" Type="Path" Display="always" Required="true" Mask="false"/>
+	<Config Name="Server port" Target="" Default="28960" Mode="udp" Description="Container Port: 28960" Type="Port" Display="always" Required="true" Mask="false">28960</Config>
+	<Config Name="Server startup args" Target="" Default="+set dedicated 2 +set sv_cheats &quot;1&quot; +set sv_maxlients &quot;64&quot; +map_rotate" Mode="" Description="Extra command line args for server startup" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
