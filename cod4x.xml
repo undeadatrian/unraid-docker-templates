@@ -21,7 +21,7 @@ http://freeforumsigs.com/ffs_gallery/albums/batch/zz-misc-logos/cod4.png
 	</Icon>
 	<ExtraParams/>
 	<PostArgs>
-+set dedicated 2 +set sv_cheats 1 +set sv_maxlients 64 +set fs_game mods/usm1 +exec usm1.cfg +map_rotate
++set dedicated 2 +set sv_cheats 1 +set sv_maxlients 64 +exec server.cfg +map_rotate
 	</PostArgs>
 	<CPUset/>
 	<DateInstalled>1556445857</DateInstalled>
@@ -55,20 +55,6 @@ http://freeforumsigs.com/ffs_gallery/albums/batch/zz-misc-logos/cod4.png
 			<ContainerDir>/home/user/cod4/zone</ContainerDir>
 			<Mode>ro</Mode>
 		</Volume>
-		<Volume>
-			<HostDir>
-/mnt/user/games/Servers/Call of Duty 4 - Modern Warfare/mods/
-			</HostDir>
-			<ContainerDir>/home/user/cod4/mods</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-		<Volume>
-			<HostDir>
-/mnt/user/games/Servers/Call of Duty 4 - Modern Warfare/usermaps/
-			</HostDir>
-			<ContainerDir>/home/user/cod4/usermaps</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
 	</Data>
 	<Environment/>
 	<Labels/>
@@ -77,12 +63,6 @@ http://freeforumsigs.com/ffs_gallery/albums/batch/zz-misc-logos/cod4.png
 	</Config>
 	<Config Name="COD4 zone" Target="/home/user/cod4/zone" Default="" Mode="ro" Description="Container Path: /home/user/cod4/zone" Type="Path" Display="always" Required="true" Mask="false">
 /mnt/user/games/Servers/Call of Duty 4 - Modern Warfare/zone/
-	</Config>
-	<Config Name="COD4 mods" Target="/home/user/cod4/mods" Default="" Mode="rw" Description="Container Path: /home/user/cod4/mods" Type="Path" Display="always" Required="true" Mask="false">
-/mnt/user/games/Servers/Call of Duty 4 - Modern Warfare/mods/
-	</Config>
-	<Config Name="COD4 usermaps" Target="/home/user/cod4/usermaps" Default="" Mode="rw" Description="Container Path: /home/user/cod4/usermaps" Type="Path" Display="always" Required="true" Mask="false">
-/mnt/user/games/Servers/Call of Duty 4 - Modern Warfare/usermaps/
 	</Config>
 	<Config Name="Server port" Target="" Default="28960" Mode="udp" Description="Container Port: 28960" Type="Port" Display="always" Required="true" Mask="false">28960</Config>
 </Container>
