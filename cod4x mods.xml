@@ -33,5 +33,5 @@ Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container
 	<Config Name="COD4 mods" Target="/home/user/cod4/mods" Default="" Mode="rw" Description="Container Path: /home/user/cod4/mods" Type="Path" Display="always" Required="true" Mask="false"/>
 	<Config Name="COD4 usermaps" Target="/home/user/cod4/usermaps" Default="" Mode="rw" Description="Container Path: /home/user/cod4/usermaps" Type="Path" Display="always" Required="true" Mask="false"/>
 	<Config Name="Server port" Target="" Default="28960" Mode="udp" Description="Container Port: 28960" Type="Port" Display="always" Required="true" Mask="false">28960</Config>
-	<Config Name="Server startup args" Target="" Default="+set dedicated 2 +set sv_cheats &quot;1&quot; +set sv_maxlients &quot;64&quot; +set fs_game mods/usm1 +exec server.cfg +map_rotate" Mode="" Description="Extra command line args for server startup" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+	<Config Name="Server startup args" Target="" Default='+set dedicated 2 +set sv_cheats "1" +set sv_maxlients "64" +set fs_game mods/usm1 +exec server.cfg +map_rotate' Mode="" Description="Extra command line args for server startup" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
