@@ -1,0 +1,78 @@
+<Container version="2">
+	<Name>cod4x</Name>
+	<Repository>qmcgaw/cod4</Repository>
+	<Registry>https://hub.docker.com/r/qmcgaw/cod4/</Registry>
+	<Network>br0</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://hub.docker.com/r/qmcgaw/cod4/</Support>
+	<Project/>
+	<Overview>
+ Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container
+	</Overview>
+	<Category>
+ Other
+	</Category>
+	<WebUI/>
+	<TemplateURL/>
+	<Icon>
+http://freeforumsigs.com/ffs_gallery/albums/batch/zz-misc-logos/cod4.png
+	</Icon>
+	<ExtraParams/>
+	<PostArgs>
++set dedicated 2 +set sv_cheats 1 +set sv_maxlients 64 +exec server.cfg +map_rotate
+	</PostArgs>
+	<CPUset/>
+	<DateInstalled>1556445857</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Description>
+ Runs a Call of duty 4 Modern Warfare dedicated server with mods in a Docker container
+	</Description>
+	<Networking>
+		<Mode>br0</Mode>
+		<Publish>
+			<Port>
+				<HostPort>28960</HostPort>
+				<ContainerPort/>
+				<Protocol>udp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>
+/mnt/user/games/hosting/servers/cod4x/main
+			</HostDir>
+			<ContainerDir>/home/user/cod4/main</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>
+/mnt/user/games/hosting/servers/cod4x/main_shared
+			</HostDir>
+			<ContainerDir>/home/user/cod4/main_shared</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>
+/mnt/user/games/hosting/servers/cod4x/zone
+			</HostDir>
+			<ContainerDir>/home/user/cod4/zone</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+	</Data>
+	<Environment/>
+	<Labels/>
+	<Config Name="COD4 main" Target="/home/user/cod4/main" Default="" Mode="rw" Description="Container Path: /home/user/cod4/main" Type="Path" Display="always" Required="true" Mask="false">
+/mnt/user/games/hosting/servers/cod4x/main
+	</Config>
+	<Config Name="COD4 main" Target="/home/user/cod4/main_shared" Default="" Mode="rw" Description="Container Path: /home/user/cod4/main_shared" Type="Path" Display="always" Required="true" Mask="false">
+/mnt/user/games/hosting/servers/cod4x/main_shared
+	</Config>
+	<Config Name="COD4 zone" Target="/home/user/cod4/zone" Default="" Mode="ro" Description="Container Path: /home/user/cod4/zone" Type="Path" Display="always" Required="true" Mask="false">
+/mnt/user/games/hosting/servers/cod4x/zone
+	</Config>
+	<Config Name="Server port" Target="" Default="28960" Mode="udp" Description="Container Port: 28960" Type="Port" Display="always" Required="true" Mask="false">28960</Config>
+</Container>
